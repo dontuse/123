@@ -14,8 +14,11 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
-                    '../js/lib/jquery-1.7.2.js',
-                    '../js/lib/tiny-pubsub.js'
+                    '../js/lib/jquery-1.8.2.min.js',
+                    '../js/lib/jqueryTools/scrollable/scrollable.js',
+                    '../js/lib/jqueryTools/scrollable/scrollable.navigator.js',
+                    '../js/js-tab-scrollable.js'
+                    //'../js/lib/tiny-pubsub.js'
                 ],
                 dest: '../publish/script.js'
             }
