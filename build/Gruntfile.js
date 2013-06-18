@@ -17,7 +17,13 @@ module.exports = function (grunt) {
                     '../js/lib/jquery-1.8.2.min.js',
                     '../js/lib/jqueryTools/scrollable/scrollable.js',
                     '../js/lib/jqueryTools/scrollable/scrollable.navigator.js',
-                    '../js/js-tab-scrollable.js'
+                    '../js/lib/jcarousel/jquery.jcarousel.js',
+
+
+
+                    '../js/js-tab-scrollable.js',
+                    '../js/js-tab-scrollable.js',
+                    '../js/js-jcarousel.js'
                     //'../js/lib/tiny-pubsub.js'
                 ],
                 dest: '../publish/script.js'
