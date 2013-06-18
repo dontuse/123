@@ -957,28 +957,45 @@ b-footer__soc-a_twit:hover {
 /*===| .b-carousel |======================end==========================================*//*---| .b-product |----------------------start----------------------------------------*/
 .b-product {
   width: 180px;
-  background: red;
+  background: orchid;
   height: 200px;
+}
+.b-product__img {
+  font-size: 0;
+  line-height: 0;
+  background: #ffffff;
+  display: block;
+}
+.b-product__name {
+  font-size: 15px;
+  line-height: 20px;
+}
+.b-product__name-lnk,
+.b-product__name-lnk:visited,
+.b-product__name-lnk:hover {
+  color: #37446d;
 }
 /*===| .b-product |======================end==========================================*//*---| .b-preview |----------------------start----------------------------------------*/
 .b-preview,
 .b-preview:hover {
   display: inline-block;
   text-decoration: none;
-  width: 180px;
+  width: 178px;
+  height: 177px;
   vertical-align: top;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
+  border: 1px solid #a2a2a2;
   background: url("/imgs/whatis.png") repeat-x left bottom #f6f6f6;
   *display: inline;
   *zoom: 1;
 }
 .b-preview__in {
   display: block;
+  font-style: normal;
   padding: 10px;
   overflow: hidden;
   text-align: center;
-  border: 1px solid #a2a2a2;
 }
 .b-preview__h {
   display: block;
@@ -993,11 +1010,61 @@ b-footer__soc-a_twit:hover {
   border: 1px solid #a2a2a2;
   width: 278px;
   height: 179px;
+  text-decoration: none;
+  text-align: center;
+  color: #d93b2b;
+  font-weight: bold;
+  font-size: 21px;
   *display: inline;
 }
 .b-services-pr__img {
   display: block;
-  background: url("/imgs/b-services-pr.png") no-repeat;
-  height: 128px;
+  background: url("/imgs/b-services-pr.png") no-repeat center -234px;
+  height: 138px;
 }
-/*===| .b-services-pr |======================end==========================================*//* дополнительные стили */
+/*===| .b-services-pr |======================end==========================================*/
+/*---| .b-services-pr_type_back |----------------------start----------------------------------------*/
+.b-services-pr_type_back .b-services-pr__img {
+  background: url("/imgs/b-services-pr.png") no-repeat center 20px;
+}
+/*===| .b-services-pr_type_back |======================end==========================================*//*---| .b-prod-addon |----------------------start----------------------------------------*/
+.b-prod-addon {
+  *zoom: 1;
+  margin-bottom: 60px;
+}
+.b-prod-addon:before,
+.b-prod-addon:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.b-prod-addon:after {
+  clear: both;
+}
+.b-prod-addon__wrap {
+  margin-right: -30px;
+  position: relative;
+}
+.b-prod-addon__img {
+  width: 79px;
+  height: 78px;
+  float: left;
+  *display: inline;
+  background: white;
+  font-size: 0;
+  text-align: center;
+}
+.b-prod-addon__el {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  overflow: hidden;
+  *display: inline;
+  width: 280px;
+}
+.b-prod-addon__txt {
+  padding-left: 20px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/*===| .b-prod-addon |======================end==========================================*//* дополнительные стили */
