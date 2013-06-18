@@ -6,7 +6,7 @@ $(function(){
         }
         ).navigator(
         {
-            activeClass: "pffff",
+            activeClass: "b-promo-box__menu-a_state_selected",
             navi : ".b-promo-box__menu"
         }
     );

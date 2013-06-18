@@ -569,7 +569,11 @@ textarea {
   margin: 0 auto;
   *zoom: 1;
 }
-/*===| .b-wrap |======================end==========================================*//*---| .b-head-box |----------------------start----------------------------------------*/
+/*===| .b-wrap |======================end==========================================*//*---| .b-content |----------------------start----------------------------------------*/
+.b-content {
+  padding-bottom: 20px;
+}
+/*===| .b-content |======================end==========================================*//*---| .b-head-box |----------------------start----------------------------------------*/
 .b-head-box {
   background: url("/imgs/b-head-box.png") repeat-x left bottom;
   min-height: 29px;
@@ -591,6 +595,7 @@ textarea {
   background-clip: padding-box;
   font-size: 0;
   padding: 0;
+  margin-bottom: 20px;
 }
 .b-main-menu__el,
 .b-main-menu__el:visited {
@@ -819,15 +824,46 @@ b-footer__soc-a_twit:hover {
 }
 /*===| .b-search |======================end==========================================*//*---| .b-promo-box |----------------------start----------------------------------------*/
 .b-promo-box {
-  background: ivory;
+  border: 1px solid #c2c2c2;
+  position: relative;
+  padding: 10px;
+}
+.b-promo-box__wrap {
+  border: 1px solid #c2c2c2;
+}
+.b-promo-box__menu {
+  float: left;
+  *display: inline;
+  *zoom: 1;
+  width: 290px;
+}
+.b-promo-box__menu-a {
+  height: 64px;
+  padding-left: 21px;
+  line-height: 64px;
+  background-image: url("/imgs/b-main-menu__el-arrow.png");
+  background-repeat: no-repeat;
+  background-position: 271px center;
+  background-color: #e6e6e6  ;
+  cursor: pointer;
+  border-bottom: #fcfcfc;
+  color: #636363;
+  font-size: 15px;
+  border: 1px solid white ;
+  border-right: none;
+}
+.b-promo-box__menu-a_state_selected {
+  background-color: #fcfcfc ;
+  border: 1px solid #c2c2c2;
+  border-right: none;
 }
 .b-promo-box__scroll-box {
   /* required settings */
 
   position: relative;
   overflow: hidden;
-  width: 660px;
-  height: 90px;
+  width: 860px;
+  height: 258px;
 }
 .b-promo-box__scroll-over {
   /* this cannot be too large */
@@ -837,6 +873,11 @@ b-footer__soc-a_twit:hover {
 }
 .b-promo-box__scroll-item {
   float: left;
-  width: 700px;
+  width: 860px;
+  height: 400px;
 }
-/*===| .b-promo-box |======================end==========================================*//* дополнительные стили */
+/*===| .b-promo-box |======================end==========================================*//*---| .b-promo |----------------------start----------------------------------------*/
+.b-promo {
+  padding-left: 70px;
+}
+/*===| .b-promo |======================end==========================================*//* дополнительные стили */
