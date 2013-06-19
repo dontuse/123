@@ -777,6 +777,9 @@ textarea {
   padding-left: 55px;
   padding-top: 10px;
 }
+.b-header__order-b {
+  height: 25px;
+}
 /*===| .b-header |======================end==========================================*//*---| .b-footer |----------------------start----------------------------------------*/
 .b-footer {
   padding-top: 28px;
