@@ -6,16 +6,18 @@
 
 .b-search__inp-wrap {
   border: 1px solid #22457b;
-  float: left;
+  position: relative;
+  .float();
 
 }
 
 .b-search__inp {
-  padding: 0;
-  margin: 0;
-  border: none;
-  height: 40px;
-  line-height: 40px;
+  .inputReset();
+  background: url("/imgs/b-search__grad.png");
+  border-top: 2px solid #edeff4;
+  border-left: 2px solid #edeff4;
+  height: 38px;
+  line-height: 38px;
   width: 505px;
   padding-left: 14px;
   font-size: 15px;
@@ -33,6 +35,20 @@
   width: 100px;
   background: url("/imgs/b-search__btn.png");
   margin-top: -1px;
+  font-size: 15px;
+  color: white;
+  text-shadow: 1px 0 #0a2f67 ;
+}
+
+.b-search__inp-clear {
+  background: url("/imgs/clear-inp.png");
+  overflow: hidden;
+  text-indent: -999999px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+  .size(17px);
 }
 
 /*===| .b-search |======================end==========================================*/
