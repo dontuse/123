@@ -22,8 +22,6 @@
   margin: 0;
   padding: 0;
   float: left;
-  width: 180px;
-  margin-right: 10px;
   *display: inline;
   *zoom: 1;
 }
@@ -38,21 +36,31 @@
 .b-carousel__next {
   position: absolute;
   background-image: url("/imgs/b-carousel-arrows.png");
-  top: 40px;
+  background-position: 0 -68px;
+  top: 120px;
   width: 19px;
-  height: 46px;
   overflow: hidden;
   text-indent: -99999px;
+  .size(19px, 46px);
 }
 
 .b-carousel__prev {
-  background: #000000;
   left: -20px;
 }
 
+.b-carousel__prev:hover {
+  left: -20px;
+  background-position: 0 0;
+}
+
 .b-carousel__next {
-  background: #000000;
   right: -20px;
+  background-position: 0 -198px
+}
+
+.b-carousel__next:hover {
+  right: -20px;
+  background-position: 0 -130px
 }
 
 /*===| .b-carousel |======================end==========================================*/
