@@ -5,8 +5,7 @@
 }
 
 .b-grid__col {
-  float: left;
-  *display: inline;
+  .float();
 
 }
 
@@ -20,5 +19,15 @@
 
 .b-grid__l-margin {
   margin-left: 20px;
+}
+
+.b-grid__col_6 {
+  width: 580px;
+}
+
+.b-grid__col_6-push-left {
+  .b-grid__col_6();
+  margin-left: 20px;
+
 }
 /*===| .b-grid |======================end==========================================*/

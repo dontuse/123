@@ -10,6 +10,11 @@
 .clearFix:after {
   clear: both;
 }
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
 @font-face {
   font-family: "ubuntuRegular";
   src: url("../blocks/i-fonts/Ubuntu-R-webfont.eot");
@@ -578,6 +583,7 @@ textarea {
 .b-grid__col {
   float: left;
   *display: inline;
+  *zoom: 1;
 }
 .b-grid__col_2-with-left {
   width: 400px;
@@ -586,6 +592,13 @@ textarea {
   width: 780px;
 }
 .b-grid__l-margin {
+  margin-left: 20px;
+}
+.b-grid__col_6 {
+  width: 580px;
+}
+.b-grid__col_6-push-left {
+  width: 580px;
   margin-left: 20px;
 }
 /*===| .b-grid |======================end==========================================*//*---| b-text |----------------------------------------------------------------*/
@@ -676,60 +689,124 @@ textarea {
 /*===| .b-head-box |======================end==========================================*//*---| .b-main-menu |----------------------start----------------------------------------*/
 .b-main-menu {
   background: url("/imgs/b-main-menu.png") repeat-x;
+  font-size: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: solid 1px #000;
+  -webkit-box-shadow: 0 1px 2px #949494;
+  -moz-box-shadow: 0 1px 2px #949494;
+  box-shadow: 0 1px 2px #949494;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 3px;
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
-  font-size: 0;
-  padding: 0;
-  margin-bottom: 20px;
-  box-shadow: 0px 1px 2px #4c4c4c;
+}
+.b-main-menu__l {
+  width: 100%;
+  vertical-align: top;
+}
+.b-main-menu__l-c {
+  width: 1px;
 }
 .b-main-menu__el,
 .b-main-menu__el:visited {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
   color: #ffffff;
+  text-shadow: 0 1px #4c4c4c;
+  padding: 0 20px;
   font-size: 15px;
   text-decoration: none;
   vertical-align: top;
   line-height: 38px;
   height: 38px;
-  width: 114px;
   border-top: 1px solid #2a4c7f;
   border-bottom: 1px solid #2a4c7f;
-}
-.b-main-menu__el:first-child {
-  -webkit-border-radius: 2px 0 0 2px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px 0 0 2px;
-  -moz-background-clip: padding;
-  border-radius: 2px 0 0 2px;
-  background-clip: padding-box;
-}
-.b-main-menu__el:last-child {
-  background: url("/imgs/b-main-menu_sp.png") repeat-x;
-  -webkit-border-radius: 0 2px 2px 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 2px 2px 0;
-  -moz-background-clip: padding;
-  border-radius: 0 2px 2px 0;
-  background-clip: padding-box;
+  display: block;
+  white-space: nowrap;
+  border-top: 1px solid #90a5c7;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
+  -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
 }
 .b-main-menu__el:hover,
 .b-main-menu__el_state_active {
   background: rgba(183, 224, 255, 0.3);
 }
-/*===| .b-main-menu |======================end==========================================*//*---| .b-header |----------------------start----------------------------------------*/
+.b-main-menu__el_special,
+.b-main-menu__el_special:visited,
+.b-main-menu__el_special:hover {
+  background: url("/imgs/b-main-menu_sp.png") repeat-x;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
+  -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.33), none;
+}
+/*===| .b-main-menu |======================end==========================================*//*---| .b-drop-menu |----------------------start----------------------------------------*/
+.b-drop-menu {
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  position: absolute;
+  top: 198px;
+  left: 0;
+  background-color: #fcfcfc;
+  width: 100%;
+  width: 1182px;
+  margin: 0 auto;
+  *zoom: 1;
+  left: 50%;
+  margin-left: -591px;
+  z-index: 1111;
+  border: solid 1px #beb9ac;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), none;
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), none;
+  display: none;
+}
+.b-drop-menu__zone1 {
+  width: 280px;
+  float: left;
+  *display: inline;
+  *zoom: 1;
+}
+.b-drop-menu__zone2 {
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 20px;
+}
+.b-drop-menu__col {
+  float: left;
+  *display: inline;
+  *zoom: 1;
+  width: 280px;
+}
+.b-drop-menu__set {
+  margin-bottom: 20px;
+}
+.b-drop-menu__h {
+  line-height: 1;
+  font-size: 15px;
+  color: #d93b2b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.b-drop-menu__el {
+  line-height: 1;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.b-drop-menu__el-a:visited,
+.b-drop-menu__el-a:hover {
+  color: #37446d;
+}
+/*===| .b-drop-menu |======================end==========================================*//*---| .b-header |----------------------start----------------------------------------*/
 .b-header__zone-1 {
   padding-bottom: 14px;
 }
 .b-header__zone-3 {
   width: 280px;
-  padding-top: 25px;
+  padding-top: 32px;
   margin-right: 21px;
   float: left;
   *zoom: 1;
@@ -803,6 +880,9 @@ textarea {
   clear: both;
   border-top: 2px solid #dadfe7;
   margin-top: 10px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  *zoom: 1;
 }
 .b-footer__grid {
   float: left;
@@ -905,17 +985,19 @@ b-footer__soc-a_twit:hover {
   font-size: 13px;
   line-height: 1;
   margin-top: 37px;
+  width: 900px;
 }
 .b-footer__jetstyle-copyr,
 .b-footer__jetstyle-copyr:visited,
 .b-footer__jetstyle-copyr:hover {
-  float: right;
+  display: block;
   margin-top: 24px;
   padding-top: 38px;
   font-size: 13px;
   color: #a3a3a3;
   line-height: 16px;
   background: url("/imgs/foot-logos.png") no-repeat 0 -148px;
+  *zoom: 1;
 }
 /* copy  end*/
 /*===| .b-footer |======================end==========================================*//*---| .b-search |----------------------start----------------------------------------*/
@@ -967,6 +1049,21 @@ b-footer__soc-a_twit:hover {
   cursor: pointer;
   width: 17px;
   height: 17px;
+}
+.b-search__exmp {
+  font-size: 13px;
+  color: #adadac;
+  clear: both;
+}
+.b-search__exmp-a,
+.b-search__exmp-a:visited {
+  color: #adadac;
+  text-decoration: none;
+  border-bottom: 1px dashed #adadac;
+  line-height: 1;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 /*===| .b-search |======================end==========================================*//*---| .b-promo-box |----------------------start----------------------------------------*/
 .b-promo-box {
@@ -1246,4 +1343,9 @@ b-footer__soc-a_twit:hover {
   overflow: hidden;
   *zoom: 1;
 }
-/*===| .b-prod-addon |======================end==========================================*//* дополнительные стили */
+/*===| .b-prod-addon |======================end==========================================*//*---| .b-promo-tool |----------------------start----------------------------------------*/
+.b-promo-tool {
+  background: darkgray;
+  height: 200px;
+}
+/*===| .b-promo-tool |======================end==========================================*//* дополнительные стили */

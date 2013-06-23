@@ -23,7 +23,8 @@ module.exports = function (grunt) {
 
                     '../js/js-tab-scrollable.js',
                     '../js/js-tab-scrollable.js',
-                    '../js/js-jcarousel.js'
+                    '../js/js-jcarousel.js',
+                    '../js/js-drop-menu.js'
                     //'../js/lib/tiny-pubsub.js'
                 ],
                 dest: '../publish/script.js'
@@ -73,7 +74,8 @@ module.exports = function (grunt) {
             },
             css: {
                 files: [
-                    '../blocks/**/*.less'
+                    '../blocks/**/*.less',
+                    '../blocks/*.less'
                 ],
                 tasks: ['concat','less:dev']
             }
