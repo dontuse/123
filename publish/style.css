@@ -1,3 +1,4 @@
+@import "/blocks/b-rub/b-rub_arial/stylesheet.css";
 .clearFix {
   *zoom: 1;
 }
@@ -844,6 +845,7 @@ textarea {
 .b-header__phone b {
   font-size: 18px;
   color: #37446d;
+  font-weight: bold;
 }
 .b-header__basket {
   background: url("/imgs/basket.png") no-repeat;
