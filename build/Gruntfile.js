@@ -11,6 +11,18 @@ module.exports = function (grunt) {
                 '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
                 'YOUR_NAME; Licensed MIT */'
         },
+
+        imageEmbed: {
+            dist: {
+                src: ['../publish/style.css'],
+                dest: '../publish/style64.css',
+                options: {
+                    deleteAfterEncoding : false
+
+                }
+            }
+        },
+
         concat: {
             dist: {
                 src: [
@@ -18,7 +30,6 @@ module.exports = function (grunt) {
                     '../js/lib/jqueryTools/scrollable/scrollable.js',
                     '../js/lib/jqueryTools/scrollable/scrollable.navigator.js',
                     '../js/lib/jcarousel/jquery.jcarousel.js',
-
 
 
                     '../js/js-tab-scrollable.js',
@@ -43,7 +54,7 @@ module.exports = function (grunt) {
                     data: {
                         debug: true
                     },
-                    pretty : true
+                    pretty: true
                 },
                 files: {
                     "../publish/index.html": ["../pages/index.jade"]
@@ -77,7 +88,7 @@ module.exports = function (grunt) {
                     '../blocks/**/*.less',
                     '../blocks/*.less'
                 ],
-                tasks: ['concat','less:dev']
+                tasks: ['concat', 'less:dev']
             }
         }
     });
@@ -88,12 +99,14 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks("grunt-image-embed");
+
 
     // main dev task
     grunt.registerTask('default', [ 'jade', 'concat' , 'less:dev']);
 
     // production
-    grunt.registerTask('prod', ['concat', 'uglify' , 'less:production']);
+    grunt.registerTask('prod', ['concat', 'uglify' , 'less:production' , 'css_img_2_data_uri']);
 
 
     grunt.registerTask('watcher', ['concat', ' less:dev']);
