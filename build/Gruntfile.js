@@ -106,7 +106,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [ 'jade', 'concat' , 'less:dev']);
 
     // production
-    grunt.registerTask('prod', ['concat', 'uglify' , 'less:production' , 'css_img_2_data_uri']);
+    grunt.registerTask('prod', ['concat', 'uglify' , 'less:production' , 'imageEmbed'] );
 
 
     grunt.registerTask('watcher', ['concat', ' less:dev']);
